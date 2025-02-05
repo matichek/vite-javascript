@@ -1,5 +1,43 @@
+# Vite JavaScript Project
 
-## Use in wordpress
+This project is a Vite-based JavaScript application that includes SCSS styling and modular JavaScript components. It is designed to be used as a WordPress theme or standalone web application.
+
+## Project Structure
+
+- **html/**: Contains HTML files (`index.html`, `sample.html`) used as entry points for the application.
+- **src/**: Contains JavaScript and SCSS source files.
+  - **main.js**: Main JavaScript entry file.
+  - **js/**: Directory for additional JavaScript modules.
+  - **style/**: Directory for SCSS styles.
+- **dist/**: Output directory for built files.
+
+## Setup
+
+1. **Install Dependencies**: Ensure you have Node.js installed, then run:
+
+   ```bash
+   npm install
+   ```
+
+2. **Development Server**: Start the Vite development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   This will serve your application at `http://localhost:3000`.
+
+3. **Build for Production**: Compile and bundle your application for production:
+
+   ```bash
+   npm run build
+   ```
+
+   The output will be placed in the `dist` directory.
+
+## Usage in WordPress
+
+To use the compiled assets in a WordPress theme, enqueue the scripts and styles in your theme's `functions.php`:
 
 ```php
 function my_theme_enqueue_scripts() {
