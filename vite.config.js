@@ -11,6 +11,7 @@ export default defineConfig({
         main: resolve(__dirname, 'html/index.html'),
         sample: resolve(__dirname, 'html/sample.html')
       }
-    }
+    },
+    manifest: true
   }
 });
