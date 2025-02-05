@@ -1,11 +1,16 @@
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite';
 
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
 export default defineConfig({
-  css: {
-    preprocessorOptions: {
-    //   scss: {
-    //     additionalData: `@import "./src/style/_variables.scss";` // Import global variables
-    //   }
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'html/index.html'),
+        sample: resolve(__dirname, 'html/sample.html')
+      }
     }
   }
-}); 
+});

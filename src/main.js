@@ -1,7 +1,8 @@
 import './style/main.scss'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import { setupCounter } from './js/counter.js'
+import { TestModule } from './js/test.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -19,6 +20,15 @@ document.querySelector('#app').innerHTML = `
       Click on the Vite logo to learn more
     </p>
   </div>
+
+  <div class="card">
+    <p id="test-text"></p>
+    <p id="test-number"></p>
+  </div>
 `
 
 setupCounter(document.querySelector('#counter'))
+
+const testModule = new TestModule();
+document.getElementById('test-text').textContent = testModule.exportText();
+document.getElementById('test-number').textContent = testModule.exportNumber();

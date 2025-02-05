@@ -4,5 +4,9 @@
 @use './header' as *;
 
 body {
+    background-color: $secondary-color;
+}
+
+.container {
     background-color: $primary-color;
 }
