@@ -1,0 +1,8 @@
+@use 'sass:math' as math;
+
+@use './variables' as *;
+@use './header' as *;
+
+body {
+    background-color: $primary-color;
+}
